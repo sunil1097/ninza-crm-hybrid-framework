@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-08-13T02:28:59 IST" name="Default suite" finished-at="2025-08-13T02:29:07 IST" duration-ms="8677">
+    <groups>
+    </groups>
+    <test started-at="2025-08-13T02:28:59 IST" name="Default test" finished-at="2025-08-13T02:29:07 IST" duration-ms="8677">
+      <class name="com.ninza.crm.tests.contacts.CreateContactTest">
+        <test-method is-config="true" signature="browserLaunch(org.testng.ITestContext)[pri:0, instance:com.ninza.crm.tests.contacts.CreateContactTest@6150c3ec]" started-at="2025-08-13T02:28:59 IST" name="browserLaunch" finished-at="2025-08-13T02:29:01 IST" duration-ms="1969" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@4275c20c]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserLaunch -->
+        <test-method is-config="true" signature="login()[pri:0, instance:com.ninza.crm.tests.contacts.CreateContactTest@6150c3ec]" started-at="2025-08-13T02:29:01 IST" name="login" finished-at="2025-08-13T02:29:05 IST" duration-ms="3973" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="testCreateContact(org.testng.ITestContext)[pri:1, instance:com.ninza.crm.tests.contacts.CreateContactTest@6150c3ec]" started-at="2025-08-13T02:29:05 IST" name="testCreateContact" finished-at="2025-08-13T02:29:07 IST" duration-ms="2431" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@4275c20c]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateContact -->
+        <test-method is-config="true" signature="logOut()[pri:0, instance:com.ninza.crm.tests.contacts.CreateContactTest@6150c3ec]" started-at="2025-08-13T02:29:07 IST" name="logOut" finished-at="2025-08-13T02:29:07 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logOut -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.ninza.crm.tests.contacts.CreateContactTest@6150c3ec]" started-at="2025-08-13T02:29:07 IST" name="tearDown" finished-at="2025-08-13T02:29:07 IST" duration-ms="253" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.ninza.crm.tests.contacts.CreateContactTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="CRM-Suite">
+  <test thread-count="5" name="Campaign-Flow"  preserve-order="true" >
+    <classes>
+      <class name="com.ninza.crm.tests.campaign.CreateCampaignTest"/>
+      <class name="com.ninza.crm.tests.campaign.EditCampaignTest"/>
+      <class name="com.ninza.crm.tests.campaign.DeleteCampaignTest"/>
+    </classes>
+  </test>
+</suite>
