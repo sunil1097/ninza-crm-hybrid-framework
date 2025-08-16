@@ -10,7 +10,7 @@ public class EditCampaignTest extends BaseTest {
 	
 	CampaignsPage cp;
 	@Test(priority=2)
-	public void testEditCamppaign(ITestContext context) throws InterruptedException{
+	public void testEditCampaign(ITestContext context) throws InterruptedException{
 		
 		String oldName= (String) context.getAttribute("campaignName");
 		String updatedName = oldName+"updated";

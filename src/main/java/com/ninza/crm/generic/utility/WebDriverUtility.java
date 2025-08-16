@@ -7,7 +7,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -37,11 +36,6 @@ public class WebDriverUtility {
 	public void hover(WebElement element) {
 		Actions act = new Actions(driver);
 		act.moveToElement(element).perform();
-	}
-	public void clickWhenAvailabel(By locator ,int timeOutInSeconds) {
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(timeOutInSeconds));
-		WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(locator));
-		ele.click();
 	}
 	public void selectByValue(WebElement dropDown, String selectByValue) {
 		Select sel = new Select(dropDown);
@@ -84,6 +78,24 @@ public class WebDriverUtility {
 	public void switchToOriginalWindow(String originalWindow) {
 		driver.switchTo().window(originalWindow);
 	}
+	// wait for element to be clickable 
+	public WebElement waitForElementClickable(WebElement element,int timeOut) {
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(timeOut));
+		return wait.until(ExpectedConditions.elementToBeClickable(element));
+		
+	}
+	
+	// wait  for element to be visible // dynamic used for By locator 
+	public WebElement waitForElementVisible(By locator, int timeOut) {
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(timeOut));
+		return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+	}
+	// optional we want to use findBy for dynamic elements 
+	 // Overload: visible using WebElement
+    public WebElement waitForElementVisible(WebElement element, int timeOut) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
+        return wait.until(ExpectedConditions.visibilityOf(element));
+    }
 	
 	
 

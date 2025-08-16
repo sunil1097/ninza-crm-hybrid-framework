@@ -1,5 +1,9 @@
 package com.ninza.crm.tests.contacts;
 
-public class DeleteContactTest {
+import com.ninza.crm.base.utility.BaseTest;
 
+public class DeleteContactTest extends BaseTest{
+
+	
+	
 }

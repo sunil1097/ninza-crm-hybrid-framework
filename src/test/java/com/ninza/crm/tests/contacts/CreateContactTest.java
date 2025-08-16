@@ -26,11 +26,14 @@ public class CreateContactTest extends BaseTest {
 		List<String> row = data.get(0);
 		String OrgName= row.get(2);
 		String Title = row.get(3);
-		String ContactName= row.get(0)+ "sunil";
+		String ContactName= row.get(0)+"ckdd";
 		String Mobile = row.get(1);
-		cp.createContact(OrgName, Title, ContactName, Mobile);
+		String generatedContactId =cp.createContact(OrgName, Title, ContactName, Mobile);
 		
-		context.setAttribute("ContactName", ContactName);
+		context.setAttribute("ContactId", generatedContactId);
+        context.setAttribute("ContactName", ContactName);
+
+        System.out.println("Contact created successfully with ID: " + generatedContactId);
 		
 		
 	}
