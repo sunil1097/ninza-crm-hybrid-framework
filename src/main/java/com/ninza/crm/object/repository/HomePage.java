@@ -16,12 +16,20 @@ public class HomePage {
 	// navigate to Contact page 
 	@FindBy(xpath="//a[text()='Contacts']")
 	private WebElement navToContact;
-	public WebElement getNavToContactPage() {
-		return navToContact;
-	}
 	
+	
+	// navigate to Leads Page
+	@FindBy(xpath="//a[text()='Leads']")
+	private WebElement leadsPage;
+	
+	
+	
+	//Action methods 
 	public void navToContact() {
-		getNavToContactPage().click();
+		navToContact.click();
+	}
+	public void navigateToLeads() {
+		leadsPage.click();
 	}
 	
 	

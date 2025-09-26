@@ -40,7 +40,7 @@ public class BaseTest {
 			driver = new EdgeDriver();
 		}
 		else {
-			driver = new ChromeDriver();
+			driver = new EdgeDriver();
 		}
 		sdriver=driver;
 		wdUtil = new WebDriverUtility(driver);

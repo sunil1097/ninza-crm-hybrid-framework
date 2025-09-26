@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.ninza.crm.tests.contacts.CreateContactTest">
+      <class name="com.ninza.crm.tests.contacts.EditContactTest">
         <methods>
+          <include name="testEditContact" invocation-numbers="0"/>
           <include name="login"/>
           <include name="browserLaunch"/>
-          <include name="testCreateContact" invocation-numbers="0"/>
           <include name="logOut"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.ninza.crm.tests.contacts.CreateContactTest -->
+      </class> <!-- com.ninza.crm.tests.contacts.EditContactTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

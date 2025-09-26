@@ -8,11 +8,27 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">23,441</td><td></td><td></td></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">ContactFlow</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">40,421</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.ninza.crm.tests.contacts.CreateContactTest</td><td><a href="#m0">testCreateContact</a></td><td rowspan="1">1755381782451</td><td rowspan="1">9554</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">ContactFlow &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.ninza.crm.tests.contacts.DeleteContactTest</td><td><a href="#m0">deleteContact</a></td><td rowspan="1">1756067754737</td><td rowspan="1">2</td></tr><tr class="failedodd"><td rowspan="1">com.ninza.crm.tests.contacts.EditContactTest</td><td><a href="#m1">testEditContact</a></td><td rowspan="1">1756067736838</td><td rowspan="1">10380</td></tr><tr><th colspan="4">ContactFlow &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.ninza.crm.tests.contacts.CreateContactTest</td><td><a href="#m2">testCreateContact</a></td><td rowspan="1">1756067722862</td><td rowspan="1">6084</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">com.ninza.crm.tests.contacts.CreateContactTest#testCreateContact</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>org.testng.TestRunner@4275c20c</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>ContactFlow</h2><h3 id="m0">com.ninza.crm.tests.contacts.DeleteContactTest#deleteContact</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>org.testng.TestRunner@2cb3d0f7</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;com.ninza.crm.object.repository.ContactsPage.deleteContact(String, String, String)&quot; because &quot;this.cp&quot; is null
+	at com.ninza.crm.tests.contacts.DeleteContactTest.deleteContact(DeleteContactTest.java:16)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.ninza.crm.tests.contacts.EditContactTest#testEditContact</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>org.testng.TestRunner@2cb3d0f7</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: Cannot locate option with value: CON01922
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.findOptionsByValue(Select.java:393)
+	at org.openqa.selenium.support.ui.Select.selectByValue(Select.java:277)
+	at com.ninza.crm.generic.utility.WebDriverUtility.selectByValue(WebDriverUtility.java:42)
+	at com.ninza.crm.object.repository.ContactsPage.editContact(ContactsPage.java:134)
+	at com.ninza.crm.tests.contacts.EditContactTest.testEditContact(EditContactTest.java:24)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.ninza.crm.tests.contacts.CreateContactTest#testCreateContact</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>org.testng.TestRunner@2cb3d0f7</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

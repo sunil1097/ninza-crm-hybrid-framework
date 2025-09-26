@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>TestNG:  Default test</title>
+<title>TestNG:  ContactFlow</title>
 <link href="../testng.css" rel="stylesheet" type="text/css" />
 <link href="../my-testng.css" rel="stylesheet" type="text/css" />
 
@@ -53,13 +53,13 @@ function toggleAllBoxes() {
 
 </head>
 <body>
-<h2 align='center'>Default test</h2><table border='1' align="center">
+<h2 align='center'>ContactFlow</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Aug 25 00:11:16 IST 2025</td>
+<td>Started on:</td><td>Mon Aug 25 02:05:14 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>4 seconds (4863 ms)</td>
+<tr><td>Total time:</td><td>40 seconds (40421 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,13 +76,29 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.ninza.crm.tests.contacts.EditContactTest.testEditContact()'><b>testEditContact</b><br>Test class: com.ninza.crm.tests.contacts.EditContactTest<br>Parameters: org.testng.TestRunner@3ce3db41</td>
-<td><div><pre>java.lang.NullPointerException
-	at java.base/java.util.concurrent.ConcurrentHashMap.putVal(ConcurrentHashMap.java:1011)
-	at java.base/java.util.concurrent.ConcurrentHashMap.put(ConcurrentHashMap.java:1006)
-	at org.testng.internal.Attributes.setAttribute(Attributes.java:25)
-	at org.testng.TestRunner.setAttribute(TestRunner.java:1209)
-	at com.ninza.crm.tests.contacts.EditContactTest.testEditContact(EditContactTest.java:25)
+<td title='com.ninza.crm.tests.contacts.EditContactTest.testEditContact()'><b>testEditContact</b><br>Test class: com.ninza.crm.tests.contacts.EditContactTest<br>Parameters: org.testng.TestRunner@2cb3d0f7</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Cannot locate option with value: CON01922
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.findOptionsByValue(Select.java:393)
+	at org.openqa.selenium.support.ui.Select.selectByValue(Select.java:277)
+	at com.ninza.crm.generic.utility.WebDriverUtility.selectByValue(WebDriverUtility.java:42)
+	at com.ninza.crm.object.repository.ContactsPage.editContact(ContactsPage.java:134)
+	at com.ninza.crm.tests.contacts.EditContactTest.testEditContact(EditContactTest.java:24)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2047812687", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2047812687'><pre>org.openqa.selenium.NoSuchElementException: Cannot locate option with value: CON01922
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.findOptionsByValue(Select.java:393)
+	at org.openqa.selenium.support.ui.Select.selectByValue(Select.java:277)
+	at com.ninza.crm.generic.utility.WebDriverUtility.selectByValue(WebDriverUtility.java:42)
+	at com.ninza.crm.object.repository.ContactsPage.editContact(ContactsPage.java:134)
+	at com.ninza.crm.tests.contacts.EditContactTest.testEditContact(EditContactTest.java:24)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -109,13 +125,17 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace616412281", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace616412281'><pre>java.lang.NullPointerException
-	at java.base/java.util.concurrent.ConcurrentHashMap.putVal(ConcurrentHashMap.java:1011)
-	at java.base/java.util.concurrent.ConcurrentHashMap.put(ConcurrentHashMap.java:1006)
-	at org.testng.internal.Attributes.setAttribute(Attributes.java:25)
-	at org.testng.TestRunner.setAttribute(TestRunner.java:1209)
-	at com.ninza.crm.tests.contacts.EditContactTest.testEditContact(EditContactTest.java:25)
+</pre></div></td>
+<td>10</td>
+<td>com.ninza.crm.tests.contacts.EditContactTest@5aa9e4eb</td></tr>
+<tr>
+<td title='com.ninza.crm.tests.contacts.DeleteContactTest.deleteContact()'><b>deleteContact</b><br>Test class: com.ninza.crm.tests.contacts.DeleteContactTest<br>Parameters: org.testng.TestRunner@2cb3d0f7</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;com.ninza.crm.object.repository.ContactsPage.deleteContact(String, String, String)&quot; because &quot;this.cp&quot; is null
+	at com.ninza.crm.tests.contacts.DeleteContactTest.deleteContact(DeleteContactTest.java:16)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1276666395", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1276666395'><pre>java.lang.NullPointerException: Cannot invoke &quot;com.ninza.crm.object.repository.ContactsPage.deleteContact(String, String, String)&quot; because &quot;this.cp&quot; is null
+	at com.ninza.crm.tests.contacts.DeleteContactTest.deleteContact(DeleteContactTest.java:16)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -144,7 +164,21 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
 <td>0</td>
-<td>com.ninza.crm.tests.contacts.EditContactTest@3b69e7d1</td></tr>
+<td>com.ninza.crm.tests.contacts.DeleteContactTest@6989da5e</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.ninza.crm.tests.contacts.CreateContactTest.testCreateContact()'><b>testCreateContact</b><br>Test class: com.ninza.crm.tests.contacts.CreateContactTest<br>Parameters: org.testng.TestRunner@2cb3d0f7</td>
+<td></td>
+<td>6</td>
+<td>com.ninza.crm.tests.contacts.CreateContactTest@dd05255</td></tr>
 </table><p>
 </body>
 </html>

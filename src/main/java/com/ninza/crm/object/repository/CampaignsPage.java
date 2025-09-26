@@ -61,9 +61,9 @@ public class CampaignsPage extends BasePage{
 	@FindBy(xpath="//input[@value='Delete']")
 	private WebElement clickOnDelete;
 
-	// waiting for modal pop up to appear 
-	public void waitUntilModalCloses(WebDriver driver, WebDriverUtility util) {
-		wdUtil.deletePopUpModal(driver, deleteModal);
+	// waiting for modal pop up to displayed
+	public void waitUntilModalOpens() {
+		wdUtil.waitForModalVisible(deleteModal,10);
 	}
 
 	
@@ -102,7 +102,7 @@ public class CampaignsPage extends BasePage{
 		searchByCampaignName.sendKeys(campaignName);
 		deleteAction.click();
 		clickOnDelete.click();
-		waitUntilModalCloses(driver,wdUtil);
+	
 	}
 	//verify the campaignname is available in the list 
 	public boolean isCampaignPresent(String CampaignName ) {

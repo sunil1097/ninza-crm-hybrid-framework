@@ -37,15 +37,22 @@ public class WebDriverUtility {
 		Actions act = new Actions(driver);
 		act.moveToElement(element).perform();
 	}
-	public void selectByValue(WebElement dropDown, String selectByValue) {
-		Select sel = new Select(dropDown);
-		sel.selectByValue(selectByValue);	
+	public void selectByValue(WebElement element, String value) {
+		Select sel = new Select(element);
+		sel.selectByValue(value);	
 	}
-	// delete pop modal 
-	public void deletePopUpModal(WebDriver driver,WebElement element) {
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOf(element));
+	// wait for modal to be visible
+	public void waitForModalVisible(WebElement element, int timeout) {
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+	    wait.until(ExpectedConditions.visibilityOf(element));
 	}
+
+	// wait for modal to be invisible (closed)
+	public void waitForModalInvisible(WebElement element, int timeout) {
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+	    wait.until(ExpectedConditions.invisibilityOf(element));
+	}
+
 	//wait for toast notification to disappear 
 	public void waitToastNotification(WebDriver driver) {
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10)) ;

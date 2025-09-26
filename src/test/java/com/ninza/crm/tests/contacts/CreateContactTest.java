@@ -26,7 +26,7 @@ public class CreateContactTest extends BaseTest {
 		List<String> row = data.get(0);
 		String OrgName= row.get(2);
 		String Title = row.get(3);
-		String ContactName= row.get(0)+"ckdd";
+		String ContactName= row.get(0)+"ck22";
 		String Mobile = row.get(1);
 		String generatedContactId =cp.createContact(OrgName, Title, ContactName, Mobile);
 		
