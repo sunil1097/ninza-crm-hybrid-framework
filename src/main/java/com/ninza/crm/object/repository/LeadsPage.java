@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import com.ninza.crm.generic.utility.WebDriverUtility;
+import com.ninza.crm.model.Lead;
 
 public class LeadsPage extends BasePage{
 	WebDriverUtility wdUtil;
@@ -34,29 +35,49 @@ public class LeadsPage extends BasePage{
 	@FindBy(xpath="//input[@name='leadStatus']")
 	private WebElement leadStatusInput;
 	
+	@FindBy(xpath="//input[@name='phone']")
+	private WebElement phoneInput;
+	
+	// click on Campaign button to select the campaign by name or id 
+	@FindBy(xpath="//div[@class='form-group']//button[@type='button']")
+	private WebElement clickOnCampaignBtn;
+		
+		
 	// low level Actions 
 	public void clickAddContactButton() {
 		addCreateLead.click();
 	}
-	public void enterTheLeadName() {
-		leadNameInput.sendKeys(null);
+	public void enterTheLeadName(String leadName) {
+		leadNameInput.sendKeys(leadName);
 	}
-	public void enterCompanyName() {
-		companyNameInput.sendKeys(null);
+	public void enterCompanyName(String companyName) {
+		companyNameInput.sendKeys(companyName);
 	}
-	public void enterTheLeadSourceName() {
-		leadSourceInput.sendKeys(null);
+	public void enterTheLeadSourceName(String leadSource) {
+		leadSourceInput.sendKeys(leadSource);
 	}
-	public void enterTheIndustryName() {
-		industryNameInput.sendKeys(null);
+	public void enterTheIndustryName(String industry) {
+		industryNameInput.sendKeys(industry);
 	}
-	public void enterTheLeadStatus() {
-		leadStatusInput.sendKeys(null);
+	public void enterTheLeadStatus(String leadStatus) {
+		leadStatusInput.sendKeys(leadStatus);
+	}
+	public void enterThePhoneNo(String phoneNo) {
+		phoneInput.sendKeys(phoneNo);
 	}
 	
+	
+	
 	//Business flows
-	public void createLead() {
-		
+	public void createLead(Lead lead,String campaingNameFromExcel) {
+		clickAddContactButton();
+		enterTheLeadName(lead.getName());
+		enterCompanyName(lead.getCompany());
+		enterTheLeadSourceName(lead.getLeadSource());
+		enterTheIndustryName(lead.getIndustry());
+		enterTheLeadStatus(lead.getLeadStatus());
+		enterThePhoneNo(lead.getPhone());
+		clickOnCampaignBtn.click();
 	}
 	
 
